@@ -23,5 +23,5 @@
   apps:
     hellognome:
       extensions: [gnome]
-      command: $SNAP/bin/hellognome
+      command: bin/hellognome
       plugs: [x11, unity7, wayland, desktop]
