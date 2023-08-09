@@ -1,4 +1,4 @@
-rom setuptools import setup, find_packages
+from setuptools import setup, find_packages
 
 with open('README.rst') as readme_file:
     readme = readme_file.read()
