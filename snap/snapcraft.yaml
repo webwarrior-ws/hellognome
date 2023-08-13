@@ -8,20 +8,21 @@
 
   grade: devel # must be 'stable' to release into candidate/stable channels
   confinement: devmode # use 'strict' once you have the right plugs and slots
+  architectures:
+  - build-on: [arm64, armhf, amd64]
 
   parts:
     my-part:
       # See 'snapcraft plugins'
       plugin: python
       source: .
-      stage-packages:
-        - python3-gi
-        - python3-xdg
-        - libcanberra-gtk3-module
-        - gir1.2-gtk-3.0
-
+      
   apps:
     hellognome:
       extensions: [gnome]
       command: bin/hellognome
-      plugs: [x11, unity7, wayland, desktop]
+      slots:
+        dbus-daemon:
+          interface: dbus
+          bus: session
+          name: com.github.lapisdecor.hellognome
