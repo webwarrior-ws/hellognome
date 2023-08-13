@@ -31,7 +31,7 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.11',
+        'Programming Language :: Python :: 3.10',
     ],
     test_suite='tests',
     tests_require=test_requirements,
