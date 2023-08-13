@@ -21,13 +21,4 @@
     hellognome:
       extensions: [gnome]
       command: bin/hellognome
-      slots:
-        dbus-hellognome
-
-
-  slots:
-    dbus-hellognome:
-      interface: dbus
-      bus: session
-      name: com.github.lapisdecor.hellognome
-    
+      
