@@ -4,8 +4,8 @@ from gi.repository import Gtk
 
 def helloworld():
     window = Gtk.Window(title="Hello World")
-    window.show()
     window.connect("destroy", Gtk.main_quit)
+    window.show_all()
     Gtk.main()
 
 if __name__ == "__main__":
