@@ -22,7 +22,7 @@ jobs:
         snapcraft --version
 
     - name: Generate snap package
-      run: snapcraft --destructive-mode || cat /home/runner/.local/state/snapcraft/log/*.log
+      run: sudo snapcraft --destructive-mode || cat /home/runner/.local/state/snapcraft/log/*.log
 
     - name: Install snap
       # dangerous because it's a local snap (not one from the SnapStore)
