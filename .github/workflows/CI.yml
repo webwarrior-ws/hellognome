@@ -24,6 +24,8 @@ jobs:
     - name: Generate snap package
       run: |
         sudo snap install --channel=latest/stable gnome-42-2204-sdk
+        sudo snap install --channel=latest/stable gnome-42-2204
+        sudo snap install --channel=latest/stable gtk-common-themes
         snapcraft --destructive-mode || cat /home/runner/.local/state/snapcraft/log/*.log
 
     - name: Install snap
